@@ -13,13 +13,21 @@
     margin-right: 20px;
     box-sizing: border-box;
     border: 1px solid transparent;
-    background-image: linear-gradient(#fff, #fff),
+    background-image: linear-gradient(#ffffff, hsl(0, 0%, 100%)),
         linear-gradient(to right, #0400ff, #c720ff);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    border-radius: 20px;
+    border-radius: 13px;
     top: 22px;
     display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scrollbar-color: rgba(255, 81, 255, 0.5) rgba(255, 255, 255, 0.3);
+    /* 透明色 */
+    scrollbar-width: thin;
+    /* 窄滚动条 */
+    opacity: 0.8;
+    /* 设置整体透明度 */
 }
 
 .player-info {
@@ -32,7 +40,7 @@
     box-shadow: 0 1px 10px rgba(255, 192, 250, 0.514);
     width: 99%;
     height: 23px;
-    border-radius: 20px;
+    border-radius: 12px;
     margin-right: 20px;
     box-sizing: border-box;
     margin: auto;
@@ -112,6 +120,7 @@ ul li {
     position: relative;
     width: 100%;
     height: 10px;
+    z-index: 7;
 }
 
 .music_progress_bar {
@@ -122,11 +131,47 @@ ul li {
     background: linear-gradient(to right, #7a65ff, #dc72ff);
     top: 40px;
     border-radius: 2px;
+    z-index: 7;
 
 }
-#bofang{
+
+#bofang {
     display: block;
 }
-#zanting{
+
+#zanting {
     display: none;
+}
+
+.music-list {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    left: 25px;
+    font-size: 12px;
+    display: block;
+}
+
+.liebiao1 {
+    width: 100%;
+    padding: 0px;
+    letter-spacing: 2px;
+    color: #c558ff;
+}
+
+.playing {
+    width: 100%;
+    padding: 0px;
+    letter-spacing: 2px;
+    color: #587fff;
+}
+
+.playing a {
+    color: #587fff;
+    text-decoration: none;
+}
+
+.liebiao1 a {
+    color: #c558ff;
+    text-decoration: none;
 }
